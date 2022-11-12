@@ -7,4 +7,4 @@ st.selectbox('Select data to show', options=['Temperature', 'Sky'], key='type', 
 city = st.session_state['city']
 days = st.session_state['days']
 type = st.session_state['type']
-st.subheader(f'{type} for the next {days} days in {city}')
+st.subheader(f'{type} for the next {days if days != 1 else ""} {"day" if days == 1 else "days" } in {city}')
