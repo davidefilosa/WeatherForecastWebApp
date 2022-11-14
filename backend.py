@@ -13,7 +13,7 @@ def get_data(city, days):
 
 
 if __name__ == '__main__':
-    print(get_data('London', 2, 'Temperature'))
+    print(get_data('London', 2))
 
 
 

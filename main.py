@@ -17,7 +17,7 @@ if city:
         filtered_data = get_data(city, days)
 
         if fc_type == 'Temperature':
-            temperatures = [round(dict['main']['temp']/10,0) for dict in filtered_data]
+            temperatures = [(dict['main']['temp']-273.15) for dict in filtered_data]
             dates = [dict['dt_txt'] for dict in filtered_data]
             labels = {'x': 'Date', 'y': 'Temperature (C)'}
             figure = px.line(x=dates, y=temperatures, labels=labels)
